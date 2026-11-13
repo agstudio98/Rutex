@@ -1,0 +1,32 @@
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies and generated output
+node_modules/
+**/node_modules/
+mobile/.expo/
+mobile/web-build/
+dist/
+coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local IDE and OS files
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Signing keys and certificates
+*.jks
+*.keystore
+*.p8
+*.p12
+*.key
+*.mobileprovision
