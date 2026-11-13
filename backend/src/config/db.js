@@ -13,6 +13,13 @@ const connectDB = async () => {
   } catch (primaryError) {
     console.warn(`⚠️ [Database Warning] No se pudo conectar a MongoDB principal (${primaryError.message}).`);
 
+    // En producción no usar una base en memoria: los datos se perderían al reiniciar.
+    if (process.env.NODE_ENV === 'production') {
+      console.error('❌ [Database Error] MongoDB no está disponible. Verificá MONGO_URI.');
+      setTimeout(connectDB, 8000);
+      return;
+    }
+
     // En entorno de desarrollo, iniciar fallback de MongoDB en memoria para que el servidor no crashee
     try {
       console.log('🔄 [Database] Iniciando instancia de MongoDB en memoria para desarrollo...');
