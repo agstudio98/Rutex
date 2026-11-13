@@ -1,6 +1,6 @@
 # Rutex
 
-**Versión 0.1.0 Beta** · Aplicación de seguridad urbana comunitaria para Android, iOS y web.
+**Versión 0.1.0-beta.1** · Aplicación de seguridad urbana comunitaria para Android, iOS y web.
 
 Rutex combina un mapa de incidencias, acompañamiento de trayectos en vivo, alertas SOS y una red de contactos de confianza. Esta versión beta incluye una app Expo/React Native y una API Node.js con MongoDB y Socket.IO.
 
@@ -15,7 +15,7 @@ Rutex combina un mapa de incidencias, acompañamiento de trayectos en vivo, aler
 - **Configuración:** perfil, radio del radar, preferencias de ubicación y opciones de alertas SOS.
 - **Interfaz multiplataforma:** React Native Maps en móvil y vista OpenStreetMap en web.
 
-> Rutex 0.1.0 es una beta. La disponibilidad del mapa, GPS, OAuth y datos compartidos depende de la configuración de cada entorno y sus servicios.
+> Rutex 0.1.0-beta.1 es una beta. La disponibilidad del mapa, GPS, OAuth y datos compartidos depende de la configuración de cada entorno y sus servicios.
 
 ## Arquitectura
 

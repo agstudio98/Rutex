@@ -2,7 +2,7 @@
 
 Servicio backend para **Rutex**, plataforma de seguridad urbana, acompañamiento en tiempo real y mapas comunitarios.
 
-**Versión 0.1.0 Beta.** Consultá las prestaciones generales en el [README principal](../README.md) y el detalle de cambios en [`CHANGELOG.md`](../CHANGELOG.md).
+**Versión 0.1.0-beta.1.** Consultá las prestaciones generales en el [README principal](../README.md) y el detalle de cambios en [`CHANGELOG.md`](../CHANGELOG.md).
 
 ## Tecnologías
 - **Node.js** & **Express**

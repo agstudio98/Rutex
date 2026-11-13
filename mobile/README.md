@@ -1,6 +1,6 @@
 # Rutex Mobile 🛡️📱
 
-**Versión 0.1.0 Beta.** Para el alcance del release, requisitos y API consultá el [README principal](../README.md).
+**Versión 0.1.0-beta.1.** Para el alcance del release, requisitos y API consultá el [README principal](../README.md).
 
 Aplicación móvil desarrollada con **React Native** y **Expo** para la plataforma **Rutex**, orientada a la seguridad urbana mediante acompañamiento en tiempo real, mapas comunitarios de incidencias y alertas de pánico.
 
