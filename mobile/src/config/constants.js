@@ -4,11 +4,24 @@ import { Platform } from 'react-native';
 // definí la IP local de tu PC (ej: '192.168.1.50'). Si es null, usa emulador/simulador.
 export const DEV_MACHINE_IP = null;
 
-export const SERVER_HOST = DEV_MACHINE_IP
+const DEV_HOST = DEV_MACHINE_IP
   ? `http://${DEV_MACHINE_IP}:5000`
   : Platform.OS === 'android'
   ? 'http://10.0.2.2:5000'
   : 'http://localhost:5000';
+
+// Producción: backend desplegado en Render (cambiá la URL por la tuya)
+const PROD_HOST = 'https://rutex-backend.onrender.com';
+
+// En Render configurá EXPO_PUBLIC_API_URL con la URL pública del backend.
+// Para web, usar localhost solo si la página también está abierta en localhost.
+const configuredHost = process.env.EXPO_PUBLIC_API_URL?.replace(/\/+$/, '');
+const isLocalWeb = Platform.OS === 'web'
+  && typeof window !== 'undefined'
+  && ['localhost', '127.0.0.1'].includes(window.location.hostname);
+const useDevHost = __DEV__ && (Platform.OS !== 'web' || isLocalWeb);
+
+export const SERVER_HOST = configuredHost || (useDevHost ? DEV_HOST : PROD_HOST);
 
 export const API_BASE_URL = `${SERVER_HOST}/api`;
 export const SOCKET_URL = SERVER_HOST;
